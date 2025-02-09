@@ -3,3 +3,9 @@
 //
 
 #include "Board.h"
+#include "utils/Position.h"
+#include "utils/Square.h"
+
+Square Board::get_square(Position position) {
+  return this->board[position.getX()][position.getY()];
+}

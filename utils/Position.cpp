@@ -7,15 +7,10 @@
 Position::Position() = default;
 
 Position::Position(int x, int y) {
-    this->x = x;
-    this->y = y;
+  this->x = x;
+  this->y = y;
 }
 
-int Position::getX() const {
-    return this->x;
-}
+int Position::getX() const { return this->x; }
 
-int Position::getY() const {
-    return this->y;
-}
-
+int Position::getY() const { return this->y; }
