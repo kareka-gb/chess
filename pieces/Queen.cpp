@@ -5,6 +5,6 @@
 #include "../Board.h"
 #include "Piece.h"
 
-class Knight : public Piece {
+class Queen : public Piece {
   bool move(Board &board, Position new_position) { return false; }
 };
