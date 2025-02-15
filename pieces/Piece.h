@@ -13,20 +13,20 @@ class Board;
 class Piece {
 protected:
   std::string color;
-  Position position;
+  Position *curr_position;
 
 public:
   Piece();
-  Piece(std::string color, Position position);
+  Piece(std::string color);
   virtual ~Piece() = default;
 
   std::string get_color();
-  Position get_position();
+  Position *get_position();
 
   void set_color(std::string color);
-  void set_position(Position position);
+  void set_position(Position *position);
 
-  virtual bool move(Board &board, Position new_position);
+  virtual bool can_move(Board *board, Position *from, Position *to);
 };
 
 #endif // PIECE_H

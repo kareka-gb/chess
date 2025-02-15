@@ -4,9 +4,20 @@
 #include "../pieces/Piece.h"
 
 class Square {
+private:
   int color;
-  bool occupied;
-  Piece piece;
+  Piece *piece;
+
+public:
+  Square(int color, Piece *piece);
+
+  int get_color();
+  Piece *get_piece();
+
+  void set_color(int color);
+  void set_piece(Piece *piece);
+
+  bool is_occupied();
 };
 
 #endif

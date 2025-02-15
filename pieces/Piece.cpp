@@ -10,17 +10,10 @@
 // position(position) {}
 Piece::Piece() = default;
 
-Piece::Piece(std::string color, Position position) {
-  this->color = std::move(color);
-  this->position = position;
-}
+Piece::Piece(std::string color) { this->color = std::move(color); }
 
 std::string Piece::get_color() { return this->color; }
-
-Position Piece::get_position() { return this->position; }
-
-void Piece::set_position(Position position) {
-  this->position = std::move(position);
-}
+Position *Piece::get_position() { return this->curr_position; }
 
 void Piece::set_color(std::string color) { this->color = std::move(color); }
+void Piece::set_position(Position *position) { this->curr_position = position; }

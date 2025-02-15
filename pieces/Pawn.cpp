@@ -5,6 +5,6 @@
 #include "../Board.h"
 #include "Piece.h"
 
-class Knight : public Piece {
-  bool move(Board &board, Position new_position) { return false; }
+class Pawn : public Piece {
+  bool can_move(Board *board, Position *from, Position *to) override {}
 };
