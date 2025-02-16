@@ -6,4 +6,5 @@ cmake_install.cmake
 chess
 cmake-build-debug
 .idea
-
+build
+.cache
