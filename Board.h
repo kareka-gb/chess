@@ -6,15 +6,15 @@
 #define BOARD_H
 #include <vector>
 
-#include "pieces/Piece.h"
-
+#include "utils/Square.h"
 
 class Board {
-    int rows = 8;
-    int cols = 8;
-    std::vector<std::vector<Piece>> board;
+private:
+  std::vector<std::vector<Square *>> board;
+
+public:
+  Square *get_square(Position Position);
+  Square *get_square(int x, int y);
 };
 
-
-
-#endif //BOARD_H
+#endif // BOARD_H

@@ -14,6 +14,10 @@ add_executable(chess main.cpp
         pieces/Pawn.cpp
         pieces/King.cpp
         pieces/Queen.cpp
+        utils/Square.cpp
+        utils/Square.h
+        utils/moves.cpp
+        utils/moves.h
         Board.cpp
         Board.h
 )
