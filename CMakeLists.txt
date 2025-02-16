@@ -1,8 +1,9 @@
-cmake_minimum_required(VERSION 3.30)
-project(chess)
+cmake_minimum_required(VERSION 3.30) # cmake version
+project(chess) # project name 
 
-set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/bin)
-set(CMAKE_CXX_STANDARD 17)
+set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/bin) # compiled binary directory
+set(CMAKE_CXX_STANDARD 17) # use c++17 standards
+set(CMAKE_EXPORT_COMPILE_COMMANDS ON) # to export compile commands so that lsp knows where to find libs
 
 include(FetchContent)
 FetchContent_Declare(SFML
@@ -33,5 +34,5 @@ add_executable(chess src/main.cpp
 )
 
 target_compile_features(chess PRIVATE cxx_std_17)
-target_link_libraries(chess PRIVATE SFML::Graphics)
+target_link_libraries(chess PRIVATE SFML::Graphics) # link external SFML library
 
