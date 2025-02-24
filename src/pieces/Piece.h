@@ -4,7 +4,7 @@
 
 #ifndef PIECE_H
 #define PIECE_H
-#include <string>
+#include <SFML/Graphics/Sprite.hpp>
 
 #include "../utils/Position.h"
 
@@ -12,18 +12,21 @@ class Board;
 
 class Piece {
 protected:
-  std::string color;
+  // used for fast logic
+  int color;
+  // used for graphics
+  sf::Sprite *sprite;
   Position *curr_position;
 
 public:
   Piece();
-  Piece(std::string color);
+  Piece(int color, sf::Sprite *sprite);
   virtual ~Piece() = default;
 
-  std::string get_color();
+  int get_color();
   Position *get_position();
 
-  void set_color(std::string color);
+  void set_color(int color);
   void set_position(Position *position);
 
   virtual bool can_move(Board *board, Position *from, Position *to);

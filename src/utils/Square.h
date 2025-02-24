@@ -9,6 +9,7 @@ private:
   Piece *piece;
 
 public:
+  Square();
   Square(int color, Piece *piece);
 
   int get_color();

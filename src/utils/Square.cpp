@@ -1,5 +1,10 @@
 #include "Square.h"
 
+Square::Square() {
+  this->color = 0;
+  this->piece = nullptr;
+}
+
 Square::Square(int color, Piece *piece) {
   this->color = color;
   this->piece = piece;

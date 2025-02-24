@@ -31,6 +31,8 @@ add_executable(chess src/main.cpp
         src/utils/moves.h
         src/Board.cpp
         src/Board.h
+        src/Game.cpp
+        src/Game.h
 )
 
 target_compile_features(chess PRIVATE cxx_std_17)
