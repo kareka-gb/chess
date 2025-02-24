@@ -6,5 +6,10 @@
 #include "Piece.h"
 
 class Pawn : public Piece {
-  bool can_move(Board *board, Position *from, Position *to) override {}
+public:
+  Pawn(int color, sf::Sprite *sprite) : Piece(color, sprite) {}
+  bool can_move(Board *board, Position *from, Position *to) override {
+    // TODO: conditions when pawn can move
+    return false;
+  }
 };

@@ -6,6 +6,8 @@
 #include "Piece.h"
 
 class Knight : public Piece {
+public:
+  Knight(int color, sf::Sprite *sprite) : Piece(color, sprite) {}
   bool can_move(Board *board, Position *from, Position *to) override {
     int fromX = from->getX();
     int fromY = from->getY();
